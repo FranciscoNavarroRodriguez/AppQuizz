@@ -1,0 +1,51 @@
+.input-ingresar{
+    width: 195px;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+}
+.btn-ingresar{
+    width: 200px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    background-color: rgb(51, 51, 51);
+    border: none;
+    &:hover{
+        background-color: rgb(40, 40, 40);
+    }
+}
+.contenedor{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+.link{
+   text-decoration: none;
+   font-weight: bold;
+   &:hover{
+    opacity: 0.9;
+   }
+}
+.alert{
+    display: flex;
+    width: 195px;
+    height: 40px;
+    align-items: center;
+    justify-content: center;
+}
+.github{
+    position: fixed;
+    top: 20px;
+    right: 20px;
+}
+a{
+    text-decoration: none;
+    color: white;
+    color: white;
+    font-weight: 600;
+    &:hover{
+        opacity: 0.8;
+    }
+}

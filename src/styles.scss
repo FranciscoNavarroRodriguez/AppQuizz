@@ -1,1 +1,18 @@
-/* You can add global styles to this file, and also import other style files */
+html{
+    min-height: 100%;
+
+}
+body{
+    background: #1e3c72;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to bottom, #2a5298, #1e3c72);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom, #2a5298, #1e3c72); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    min-height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.titulo{
+    font-family: 'Montserrat', sans-serif;
+}
+.card-titulo{
+    padding: 0px 22px;
+}

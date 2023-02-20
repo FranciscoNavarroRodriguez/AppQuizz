@@ -1,0 +1,29 @@
+.titulo-pregunta{
+    font-size: 20px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+}
+.correcta{
+    background-color: #284F93;
+    color: white
+}
+.list-group-item{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+}
+.fa-solid{
+    padding-top: 20px;
+    text-align: center;
+    font-size: 25px;
+    cursor: pointer;
+    color: #a71c2b;
+}
+.btn {
+    font-weight: bold;
+    background-color: rgb(51, 51, 51);
+    border: none;
+    &:hover{
+        background-color: rgb(40, 40, 40);
+    };
+}

@@ -1,0 +1,22 @@
+.btn {
+    font-weight: bold;
+    background-color: rgb(51, 51, 51);
+    border: none;
+    &:hover{
+        background-color: rgb(40, 40, 40);
+    }
+}
+.bg-black{
+    background-color: rgb(51, 51, 51)!important;
+}
+.fa-solid{
+    cursor: pointer;
+    font-size: 17px;
+    margin: 0px 5px;
+}
+.fa-chart-line{
+    color: darkcyan;
+}
+.fa-trash{
+    color: #a71c28;
+}

@@ -1,0 +1,32 @@
+<div class="container mt-5">
+    <div *ngIf="spinner" class="d-flex justify-content-center mb-5">
+        <app-spinner></app-spinner>
+    </div>
+    <div class="row" *ngIf="!spinner">
+        <div class="col-lg-6 offset-lg-3">
+            <div class="card">
+                <div class="card-body">
+                    <h3 class="text-center titulo">Registro</h3>
+                    <form class="mt-3" [formGroup]="registerForm" (ngSubmit)="register()">
+                        <div class="mb-3">
+                            <input formControlName="usuario" type="text" class="form-control" placeholder="Correo">
+                            <span *ngIf="registerForm.get('usuario')?.hasError('required') && registerForm.get('usuario')?.touched" class="text-danger">El correo es requerido</span>
+                            <span *ngIf="registerForm.get('usuario')?.hasError('email') && registerForm.get('usuario')?.touched" class="text-danger">El correo es inválido</span>
+                        </div>
+                        <div class="mb-3">
+                            <input formControlName="password" type="password" class="form-control" placeholder="Contraseña">
+                            <span *ngIf="registerForm.get('password')?.hasError('required') && registerForm.get('password')?.touched" class="text-danger">La contraseña es requerida</span>
+                            <span *ngIf="registerForm.get('password')?.hasError('minlength') && registerForm.get('password')?.touched" class="text-danger">La contraseña debe tener al menos 6 caracteres</span>
+                        </div>
+                        <div class="mb-3">
+                            <input formControlName="repeatPassword" type="password" class="form-control" placeholder="Repetir contraseña">
+                            <span *ngIf="registerForm.hasError('notSame')&& registerForm.get('repeatPassword')?.touched" class="text-danger">Las contraseñas deben ser iguales</span>
+                        </div>
+                        <button routerLink="/usuario" class="btn btn-secondary">Volver</button>
+                        <button [disabled]="registerForm.invalid" type="submit" class="btn btn-primary float-end">Aceptar</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

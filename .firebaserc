@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "quizz-349e6": {
+      "hosting": {
+        "Quizz": [
+          "quizz-349e6"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "quizz-349e6"
+  }
+}

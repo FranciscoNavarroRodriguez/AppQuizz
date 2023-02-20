@@ -1,0 +1,44 @@
+.contador-pregunta{
+    font-size: 5rem;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    color: white;
+    text-shadow: 1px 1px 2px black;
+}
+.contenedor{
+    height: 100vh;
+    align-items: center;
+}
+h3{
+    font-size: 40px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    color: white;
+    text-shadow: 1px 1px 2px black;
+}
+.list-group-item{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.opcion-default{
+    color: white;
+    background-color: #295197;
+}
+.opcion-success{
+    color: #146C43;
+    background-color: #D1E7DD;
+}
+.opcion-error{
+    color: #B02A37;
+    background-color: #F8D7DA;
+}
+.btn {
+    font-weight: bold;
+    background-color: rgb(51, 51, 51);
+    border: none;
+    &:hover{
+        background-color: rgb(40, 40, 40);
+    };
+}

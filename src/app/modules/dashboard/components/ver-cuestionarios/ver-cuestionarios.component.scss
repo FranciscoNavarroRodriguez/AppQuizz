@@ -1,0 +1,32 @@
+h2{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+}
+h4{
+    font-weight: 600;
+}
+.titulo-pregunta{
+    font-size: 20px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+}
+.badge{
+    font-size: 0.8rem;
+}
+.correcta{
+    background-color: #295095;
+    color: white
+}
+.list-group-item{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+}
+.btn {
+    font-weight: bold;
+    background-color: rgb(51, 51, 51);
+    border: none;
+    &:hover{
+        background-color: rgb(40, 40, 40);
+    };
+}

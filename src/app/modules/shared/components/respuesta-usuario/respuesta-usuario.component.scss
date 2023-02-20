@@ -1,0 +1,41 @@
+.contenedor{
+    height: 100vh;
+    align-items: center;
+}
+.titulo-resumen{
+    font-size: 40px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    color: white;
+    text-shadow: 1px 1px 2px black;
+}
+.nombre-puntos{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    margin-bottom: 0px;
+
+}
+.success{
+    color: #146C43;
+    background-color: #D1E7DD;
+}
+.danger{
+    color: #B02A37;
+    background-color: #F8D7DA;
+}
+.list-group-item{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+}
+h3{
+    font-weight: 600;
+}
+.btn {
+    font-weight: bold;
+    background-color: rgb(51, 51, 51);
+    border: none;
+    &:hover{
+        background-color: rgb(40, 40, 40);
+    };
+}

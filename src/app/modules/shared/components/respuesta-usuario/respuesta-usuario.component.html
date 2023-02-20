@@ -1,0 +1,63 @@
+<div *ngIf="spinner" class="contenedor mt-3 d-flex justify-content-center">
+    <app-spinner></app-spinner>
+</div>
+
+<div *ngIf="!spinner" class="container mt-5 animate__animated animate__zoomIn">
+    <div class="text-center">
+        <h1 class="titulo-resumen">RESULTADO</h1>
+        <div class="card mt-4">
+            <div class="card-body">
+                <div class="row mt-2">
+                    <div class="col-lg-6">
+                        <h3 class="nombre-puntos">Nombre: {{respuestasUsuario.nombreParticipante}}</h3>
+                    </div>
+                    <div class="col-lg-6">
+                        <h3 class="nombre-puntos">Puntos: {{respuestasUsuario.puntosTotales}}</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row mt-3">
+            <div class="col-lg-4">
+                <div class="card text-white bg-dark">
+                    <div class="card-body">
+                        <h5 class="nombre-puntos">Total Preguntas: {{respuestasUsuario.cantidadPreguntas}}</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="card text-white bg-success">
+                    <div class="card-body">
+                        <h5 class="nombre-puntos">Correctas: {{respuestasUsuario.cantidadCorrectas}}</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="card text-white bg-danger">
+                    <div class="card-body">
+                        <h5 class="nombre-puntos">Incorrectas: {{respuestasUsuario.cantidadIncorrectas}}</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div *ngFor="let pregunta of respuestasUsuario.listRespuestas" class="row mt-3">
+            <div class="col-lg-12">
+                <div class="card">
+                    <div class="card-body text-center">
+                        <h3 class="titulo">{{pregunta.titulo}}</h3>
+                        <div class="col-lg-6 offset-lg-3">
+                            <ul class="list-group mt-5">
+                                <li  *ngFor="let respuesta of pregunta.listRespuestas; let i = index" class="list-group-item" [ngClass]="{'success': respuesta.esCorrecta && pregunta.indexRespuestaSeleccionada == i, 'danger': !respuesta.esCorrecta && pregunta.indexRespuestaSeleccionada == i}" >{{respuesta.titulo}}</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row my-3">
+            <div class="col-lg-12">
+                <button (click)="volver()"  class="btn btn-dark w-100">Volver</button>
+            </div>
+        </div>
+    </div>
+</div>

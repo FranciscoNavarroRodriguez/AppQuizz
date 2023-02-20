@@ -1,0 +1,19 @@
+<div *ngIf="loading" class="contenedor mt-3 d-flex justify-content-center">
+    <app-spinner></app-spinner>
+</div>
+<div *ngIf="!loading" class="container mt-5">
+    <div class="d-flex justify-content-center mt-3">
+        <h1 class="titulo contador-pregunta">{{segundos}}</h1>
+    </div>
+    <div class="row mt-2">
+        <div class="text-center">
+            <h3 class="titulo">{{obtenerTitulo()}}</h3>
+            <div class="col-lg-6 offset-lg-3">
+                <ul class="list-group mt-5">
+                    <li [ngClass]="addClass(respuesta)" *ngFor="let respuesta of obtenerRespuestas(); let i = index" class="list-group-item animate__animated animate__fadeIn" (click)="seleccionarRespuesta(respuesta, i)">{{respuesta.titulo}}</li>
+                </ul>
+                <button [disabled]="!respuestaSeleccionada" class="btn btn-dark w-100 mt-3" (click)="siguientePregunta()">{{btnText}}</button>
+            </div>
+        </div>
+    </div>
+</div>

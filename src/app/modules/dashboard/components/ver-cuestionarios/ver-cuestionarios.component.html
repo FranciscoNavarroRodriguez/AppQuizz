@@ -1,0 +1,45 @@
+<div *ngIf="spinner" class="mt-5 d-flex justify-content-center">
+    <app-spinner></app-spinner>
+</div>
+
+<div class="container mt-3">
+    <div class="row">
+        <div class="col-lg-10 offset-lg-1">
+            <div class="card card-titulo">
+                <div class="card-body text-center">
+                    <h2>{{cuestionario?.titulo | uppercase}}</h2>
+                    <hr>
+                    <h4>{{cuestionario?.descripcion}}</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container text-center">
+    <div class="row mt-5">
+        <div class="col-lg-8 offset-lg-2">
+            <div class="card mb-3" *ngFor="let pregunta of cuestionario?.listPreguntas; let i = index">
+                <div class="card-body">
+                    <p class="titulo-pregunta">{{pregunta.titulo}}</p>
+                    <div class="row">
+                        <div class="col-lg-3 offset-lg-3">
+                            <p><span class="badge bg-dark">{{pregunta.segundos}} s</span></p>
+                        </div>
+                        <div class="col-lg-3">
+                            <p><span class="badge bg-dark">{{pregunta.puntos}} pts</span></p>
+                        </div>
+                    </div>
+                    <ul class="list-group" >
+                        <li *ngFor="let respuesta of pregunta.listRespuestas" class="list-group-item" [ngClass]="{'correcta': respuesta.esCorrecta}">{{respuesta.titulo}}</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row mb-3">
+                <div class="col-lg-12">
+                    <button class="btn btn-dark w-100" routerLink="/dashboard">Volver</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

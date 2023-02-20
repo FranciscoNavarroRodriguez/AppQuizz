@@ -1,0 +1,65 @@
+<div *ngIf="mostrarError" class="alert alert-danger text-center" role="alert">
+    Por favor, ingrese todos los campos
+  </div>
+<div class="container text-center">
+    <div class="row mt-3 mb-3">
+        <div class="col-lg-8 offset-lg-2">
+            <form [formGroup]="preguntaForm" (ngSubmit)="agregarPregunta()">
+                <input formControlName="titulo" class="form-control input-pregunta" type="text" placeholder="Ingrese pregunta" maxlength="150">
+                <div class="row mt-5">
+                    <div class="col-lg-6 text-center">
+                        <div class="fondo-item">
+                            <p class="titulo-segundos-puntos">Segundos</p>
+                            <p class="segPuntos">{{seg}}</p>
+                            <div>
+                                <i class="fa-solid fa-minus" (click)="sumarRestarSeg(-1)"></i>
+                                <i class="fa-solid fa-plus" (click)="sumarRestarSeg(1)"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 text-center">
+                        <div class="fondo-item">
+                            <p class="titulo-segundos-puntos">Puntos</p>
+                            <p class="segPuntos">{{puntos}}</p>
+                            <input formControlName="puntos" class="form-range" name="range"  type="range" min="0" max="2000">
+                        </div>
+                    </div>
+                </div>
+                <div class="row mt-5">
+                    <div class="col-lg-6">
+                        <div formGroupName="respuesta1" class="input-group">
+                            <input formControlName="titulo" type="text" class="form-control input-respuesta" placeholder="Agregar respuesta 1">
+                            <div class="input-group-text"><i (click)="esCorrecta('respuesta1')" [ngClass]="!obtenerEsCorrecta('respuesta1') ? 'fa-regular fa-circle' : 'fa-regular fa-circle-check animate__animated animate__heartBeat'"></i></div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div formGroupName="respuesta2" class="input-group" >
+                            <input formControlName="titulo" type="text" class="form-control input-respuesta" placeholder="Agregar respuesta 2">
+                            <div class="input-group-text"><i (click)="esCorrecta('respuesta2')" [ngClass]="!obtenerEsCorrecta('respuesta2') ? 'fa-regular fa-circle' : 'fa-regular fa-circle-check animate__animated animate__heartBeat'"></i></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mt-3">
+                    <div class="col-lg-6">
+                        <div formGroupName="respuesta3" class="input-group">
+                            <input formControlName="titulo" type="text" class="form-control input-respuesta" placeholder="Agregar respuesta 3 (Opcional)">
+                            <div class="input-group-text"><i (click)="esCorrecta('respuesta3')" [ngClass]="!obtenerEsCorrecta('respuesta3') ? 'fa-regular fa-circle' : 'fa-regular fa-circle-check animate__animated animate__heartBeat'"></i></div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div formGroupName="respuesta4" class="input-group">
+                            <input formControlName="titulo" type="text" class="form-control input-respuesta" placeholder="Agregar respuesta 4 (Opcional)">
+                            <div class="input-group-text"><i (click)="esCorrecta('respuesta4')" [ngClass]="!obtenerEsCorrecta('respuesta4') ? 'fa-regular fa-circle' : 'fa-regular fa-circle-check animate__animated animate__heartBeat'"></i></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mt-3">
+                    <div class="col-lg-12">
+                        <button type="submit" class="btn btn-dark w-100">Agregar pregunta</button>
+                    </div>
+                </div>
+            </form>
+            <app-list-preguntas></app-list-preguntas>
+        </div> 
+    </div>
+</div>

@@ -1,0 +1,17 @@
+.titulo{
+    font-weight: bold;
+}
+.btn {
+    font-weight: bold;
+    background-color: rgb(51, 51, 51);
+    border: none;
+    &:hover{
+        background-color: rgb(40, 40, 40);
+    }
+}
+.alert{
+    font-weight: bold;
+}
+.form-control{
+    font-weight: bold;
+}

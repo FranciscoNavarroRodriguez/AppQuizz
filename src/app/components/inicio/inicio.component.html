@@ -1,0 +1,21 @@
+<div *ngIf="spinner" class="contenedor">
+    <app-spinner></app-spinner>
+</div>
+<div *ngIf="!spinner" class="contenedor">
+    <div *ngIf="error" class="alert alert-danger" role="alert">
+        <strong>{{errorText}}</strong>
+    </div>
+    <input [(ngModel)]="pin" type="text" class="form-control input-ingresar mb-3" placeholder="PIN del juego">
+    <button (click)="ingresar()" class="btn btn-dark btn-ingresar">Ingresar</button>
+</div>
+<div class="fixed-bottom">
+    <p class="text-center text-white">
+        Cree y administre sus cuestionarios
+        <a class="link text-white" routerLink="usuario">aquí</a>
+    </p>
+</div>
+<div class="github">
+    <a href="https://github.com/Quini95" target="_blank">@Fran Navarro  <i class="fa-brands fa-github"></i></a>
+</div>
+
+

@@ -1,0 +1,26 @@
+.contenedor{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.input-nombre{
+    width: 195px;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+}
+.btn-nombre{
+    width: 200px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    background-color: rgb(51, 51, 51);
+    border: none;
+    &:hover{
+        background-color: rgb(40, 40, 40);
+    }
+}
+.alert{
+    padding: 6px 24px 6px 24px;
+}
